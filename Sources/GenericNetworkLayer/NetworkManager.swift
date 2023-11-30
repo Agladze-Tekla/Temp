@@ -51,7 +51,7 @@ final public class NetworkManager: NetworkService {
                 return handler(.failure(NetworkError.error(error: error)))
             }
             
-            guard let data else {
+            guard let data = data else {
                 return handler(.failure(NetworkError.data))
             }
             
